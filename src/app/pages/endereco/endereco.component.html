@@ -1,0 +1,65 @@
+<section class="dark">
+  <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+  <form [formGroup]="form">
+    <mat-card>
+      <mat-card-title class="text-center">
+        <h2 class="text-bold">Reporte um problema:</h2>
+      </mat-card-title>
+      <mat-card-content class="text-center">
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome:</mat-label>
+            <input matInput type="text" #nome maxlength="20" minlength="2" formControlName="nome"/>
+            <mat-hint align="end">{{ nome.value?.length || 0 }}/20</mat-hint>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Sobrenome:</mat-label>
+            <input matInput type="text" #sobrenome maxlength="20" minlength="2" formControlName="sobrenome"/>
+            <mat-hint align="end">{{ sobrenome.value?.length || 0 }}/20</mat-hint>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>CPF:</mat-label>
+            <input matInput type="text" #cpf maxlength="11" minlength="11" formControlName="cpf"/>
+            <mat-hint align="end">{{ cpf.value?.length || 0 }}/11</mat-hint>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Bairro:</mat-label>
+            <input matInput type="text" #bairro maxlength="30" minlength="2" formControlName="bairro"/>
+            <mat-hint align="end">{{ bairro.value?.length || 0 }}/30</mat-hint>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Rua ou Avenida:</mat-label>
+            <input matInput type="text" #endereco maxlength="50" minlength="2" formControlName="endereco"/>
+            <mat-hint align="end">{{ endereco.value?.length || 0 }}/50</mat-hint>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Selecione um problema</mat-label>
+            <mat-select #problema formControlName="ocorrencia">
+              <mat-option [value]="1">Cano quebrado</mat-option>
+              <mat-option [value]="2">Falta de água</mat-option>
+              <mat-option [value]="3">Deslizamento</mat-option>
+              <mat-option [value]="4">Alagamento</mat-option>
+              <mat-option [value]="5">Falta de Energia</mat-option>
+              <mat-option [value]="6">Dano Estrutural</mat-option>
+              <mat-option [value]="7">Poste derrubado</mat-option>
+              <mat-option [value]="8">Árvore derrubada</mat-option>
+              <mat-option [value]="9">Má sinalização</mat-option>
+              <mat-option [value]="10">Outro(s)</mat-option>
+            </mat-select>
+            <mat-hint align="end">{{ problema.value}}</mat-hint>
+          </mat-form-field>
+          <br>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary" (click)="postReport()">Enviar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</section>
+
