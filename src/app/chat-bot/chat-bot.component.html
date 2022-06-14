@@ -1,0 +1,9 @@
+<h5>Monitora Recife - BOT</h5>
+<form [formGroup]="form">
+    <h6>Monitora BOT : {{perguntas | json}}</h6>
+    <mat-form-field appearance="fill">
+        <mat-label>Escolha uma opção entre 1 até 3: </mat-label>
+        <input type="number" matInput formControlName="escolha">
+    </mat-form-field><br>
+    <button class="btn btn-primary btn-sm" (click)="PostResposta()"> Enviar </button>
+</form>

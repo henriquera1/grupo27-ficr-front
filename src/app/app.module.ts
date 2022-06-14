@@ -24,6 +24,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
@@ -34,6 +35,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { FormsModule }   from '@angular/forms';
 import { AcompanharComponent } from './pages/acompanhar/acompanhar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatBotComponent } from './chat-bot/chat-bot.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     EnderecoComponent,
     AcompanharComponent,
+    ChatBotComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +81,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgxSpinnerModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
